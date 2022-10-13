@@ -1,6 +1,6 @@
 <mat-drawer-container
   [autosize]="true"
-  class="min-h-full max-w-7xl mx-auto border-x"
+  class="min-h-full mx-auto max-w-7xl border-x"
 >
   <mat-drawer mode="side" opened class="p-6">
     <app-filters (showcategory)="onShowCategory($event)"></app-filters>
@@ -14,36 +14,7 @@
     <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
       <mat-grid-tile>
         <app-product-box
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-box
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-box
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-box
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-box
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-box
+          (addToCart)="onAddToCart($event)"
           class="w-full"
           [fullWidthMode]="cols === 1"
         ></app-product-box>
